@@ -1,0 +1,21 @@
+<!--pages/video/video.wxml-->
+<wxs src="../../utils/format.wxs" module="format"></wxs>
+<view class="container">
+    <block wx:for="{{topMVs}}" wx:key="id">
+        <view class="item">
+            <view class="img">
+                <image src="{{item.cover}}" mode="widthFix"></image>
+                <view class="mark">
+                    <view class="playCount">
+                    <text class="iconfont icon-video1-copy"></text>
+                        {{format.formatCount(item.playCount)}}
+                    </view>
+                    <text class="duration">{{format.formatDuration(item.mv.videos[0].duration)}}</text>
+                </view>
+            </view>
+            <view class="info">
+                {{item.name}}  -  {{item.artistName}}
+            </view>
+        </view>
+    </block>
+</view>
