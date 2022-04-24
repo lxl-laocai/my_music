@@ -1,5 +1,9 @@
 /**app.wxss**/
 @import "./assets/font/font.wxss";
+page{
+    background-color: #fafafa;
+    box-sizing: border-box;
+}
 view{
     box-sizing: border-box;
 }

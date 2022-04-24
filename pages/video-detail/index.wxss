@@ -1,0 +1,62 @@
+/* pages/video-detail/index.wxss */
+page{
+    padding-top: 225px;
+}
+.video{
+    width: 100%;
+    position: fixed;
+    top: 0;
+}
+.introduction{
+    padding: 20rpx;
+}
+.title{
+    font-size: 40rpx;
+    font-weight: bold;
+}
+.artist{
+    font-size: 35rpx;
+    color: #2b2122a1;
+}
+.artist-name{
+    color: #8c8787;
+    font-size: 28rpx;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+.play{
+    color: #161616;
+    font-size: 30rpx;
+}
+.related{
+    padding: 20rpx;
+}
+.related-title{
+    font-size: 35rpx;
+    font-weight: 500;
+    margin: 0 0 20rpx;
+}
+.related-item{
+    display: flex;
+    margin: 10rpx 0;
+}
+
+.related-left>image{
+    width: 200rpx;
+    height: 120rpx;
+    border-radius: 10rpx;
+}
+.related-right{
+    margin-left: 20rpx;
+}
+.related-right-title{
+    font-size: 28rpx;
+}
+.related-right-username{
+    font-size: 25rpx;
+}
+
+
+

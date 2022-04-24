@@ -5,13 +5,39 @@ import {
 
 Page({
     data: {
-        topMVs: []
+        topMVs: [],
+        hasMore: true
     },
-    async onLoad() {
-        let result = await getTopMV(0);
-        this.setData({
-            topMVs: result.data
+    onLoad() {
+        this.getTopMVData(0)
+    },
+    onReachBottom() {
+        this.getTopMVData(this.data.topMVs.length)
+    },
+    onPullDownRefresh() {
+        this.getTopMVData(0)
+    },
+    handleVideoItemClick(e) {
+        let id = e.currentTarget.dataset.item.id;
+        wx.navigateTo({
+          url: `/pages/video-detail/index?id=${id}`,
         })
-        console.log(this.data.topMVs);
+    },
+    async getTopMVData(offset) {
+        if (!this.data.hasMore && !offset == 0) return;
+        wx.showNavigationBarLoading();
+        let result = await getTopMV(offset);
+        let tempData = [];
+        if (offset == 0) {
+            tempData = result.data
+            wx.stopPullDownRefresh()
+        } else {
+            tempData = [...this.data.topMVs, ...result.data]
+        }
+        this.setData({
+            hasMore: result.hasMore,
+            topMVs: tempData
+        })
+        wx.hideNavigationBarLoading()
     }
 })

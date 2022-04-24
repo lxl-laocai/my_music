@@ -1,2 +1,19 @@
 <!--pages/music/music.wxml-->
-<text>pages/music/music.wxml</text>
+<van-search bind:click-input="handleSearchClick" disabled shape="round" background="#fafafa" placeholder="请输入搜索关键词" />
+<swiper indicator-dots autoplay circular indicator-color="#eee" indicator-active-color="#e00016" class="swiper" style="height: {{swiperHeight}}px;">
+  <block wx:for="{{banners}}" wx:key="bannerId">
+    <swiper-item class="swiper-item">
+      <image class="swiper-image" src="{{item.pic}}" mode="widthFix" bindload="handleSwiperImageLoaded"></image>
+    </swiper-item>
+  </block>
+</swiper>
+<view class="aera-header">
+  <area-header title="推荐歌曲" showRight="{{true}}">
+    <!-- <text>插槽</text> -->
+  </area-header>
+  <view class="song">
+    <block wx:for="{{recommendSongs}}" wx:key="id">
+      <view>{{item.name}}</view>
+    </block>
+  </view>
+</view>

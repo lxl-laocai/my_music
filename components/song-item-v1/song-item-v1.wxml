@@ -1,0 +1,9 @@
+<!--components/song-item-v1/song-item-v1.wxml-->
+<view class="item">
+  <image src="{{item.al.picUrl}}" class="image"></image>
+  <view class="content">
+    <view class="name">{{item.al.name}}</view>
+    <view class="source">{{item.ar[0].name}}</view>
+  </view>
+  <view></view>
+</view>

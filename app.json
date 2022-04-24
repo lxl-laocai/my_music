@@ -1,12 +1,15 @@
 {
     "pages": [
+        "pages/music/music",
         "pages/video/video",
-        "pages/music/music"
+        "pages/video-detail/index",
+        "pages/search-detail/index",
+        "components/area-header/index"
     ],
     "tabBar": {
-        "color":"#2c2c2c",
-        "selectedColor":"#e00016",
-        "backgroundColor":"#fff",
+        "color": "#2c2c2c",
+        "selectedColor": "#e00016",
+        "backgroundColor": "#fff",
         "borderStyle": "black",
         "list": [
             {
@@ -25,8 +28,8 @@
     },
     "window": {
         "backgroundTextStyle": "light",
-        "navigationBarBackgroundColor": "#fff",
-        "navigationBarTitleText": "网易云",
+        "navigationBarBackgroundColor": "#fafafa",
+        "navigationBarTitleText": "music",
         "navigationBarTextStyle": "black"
     },
     "style": "v2",

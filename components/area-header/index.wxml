@@ -1,0 +1,13 @@
+<!--components/area-header/index.wxml-->
+<view class="header">
+    <view class="title">{{title}}</view>
+    <view class="more" wx:if="{{showRight}}">
+        <view class="slot">
+            <slot></slot>
+        </view>
+        <view class="defalut">
+            <text class="more-text">{{rightText}}</text>
+            <text class="iconfont icon-jiantouyou"></text>
+        </view>
+    </view>
+</view>

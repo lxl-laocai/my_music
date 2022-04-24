@@ -1,0 +1,60 @@
+/* components/video-item-v1/index.wxss */
+@import "../../assets/font/font.wxss";
+
+.item {
+    width: 100%;
+    margin-top: 10rpx;
+    margin-bottom: 10rpx;
+    padding-bottom: 10rpx;
+    background-color: #fff;
+    border-bottom-left-radius: 10rpx;
+    border-bottom-right-radius: 10rpx;
+}
+
+.img {
+    position: relative;
+    width: 100%;
+}
+
+.image {
+    width: 100%;
+    border-radius: 10rpx;
+}
+
+.mark {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 10rpx;
+    left: 0;
+    width: 100%;
+    color: #fff;
+    padding: 0 12rpx;
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.icon-video1-copy {
+    font-size: 35rpx;
+}
+
+.playCount {
+    font-size: 28rpx;
+}
+
+.duration {
+    font-size: 25rpx;
+}
+
+.info {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-overflow: -o-ellipsis-lastline;
+    display: -webkit-box;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+    padding-left: 15rpx;
+    /* margin: 15rpx 0; */
+}
